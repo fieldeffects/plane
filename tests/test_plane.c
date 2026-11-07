@@ -1,5 +1,5 @@
 /* test_plane.c — unit tests for plane.h (PLANE v1 reference implementation).
- * Build: cc -std=c11 -Wall -Wextra -Werror -I.. test_plane.c -o test_plane
+ * Build: cc -std=c23 -Wall -Wextra -Werror -I.. test_plane.c -o test_plane
  * Run from tests/ so the round-trip fixture lands in a temp path. */
 #include "../plane.h"
 

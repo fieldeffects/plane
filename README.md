@@ -70,7 +70,7 @@ For `shift ≥ 3`, `stride == width << (shift − 3)` exactly, so the payload is
 
 ## Reference implementation — `plane.h`
 
-Single header, dependency-free, C11. Loading is zero-copy: `Plane.data` points into your buffer.
+Single header, dependency-free, C23. Loading is zero-copy: `Plane.data` points into your buffer.
 
 ```c
 /* plane.h — PLANE: Packed Linear Array, Nothing Else. Version 1.
