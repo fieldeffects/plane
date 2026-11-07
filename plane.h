@@ -1,4 +1,4 @@
-/* plane.h — PLANE: Packed Linear Array, Nothing Else. Version 1.
+/* plane.h — PLANE: Packed Linear Array, Nothing Else.
  * Little-endian. No magic. No version. Flags are yours. */
 #ifndef PLANE_H
 #define PLANE_H
@@ -10,13 +10,14 @@
 #include <stdbool.h>
 
 #define PLANE_HEADER_SIZE 16u
-#define PLANE_MAX_SHIFT 6 /* chunks up to 64 bits; raise if you dare */
+#define PLANE_MAX_SHIFT 6       /* chunks up to 64 bits; raise if you dare */
 
 typedef struct {
-    uint32_t width, height; /* chunks per row, rows */
-    uint8_t  shift;    /* log2 bits per chunk: chunk = 1u << shift */
-    uint32_t flags;     /* user-defined */
-    uint8_t *data;     /* payload rows, each plane_stride(width, shift) bytes */
+    uint32_t    width;          /* chunks per row, rows */
+    uint32_t    height;         /* rows */
+    uint8_t     shift;          /* log2 bits per chunk: chunk = 1u << shift */
+    uint32_t    flags;          /* user-defined */
+    uint8_t*    data;           /* payload rows, each plane_stride(width, shift) bytes */
 } Plane;
 
 /* geometry — all functions assume 0 <= shift <= PLANE_MAX_SHIFT */
