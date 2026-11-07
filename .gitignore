@@ -1,0 +1,6 @@
+# build artifacts
+tests/test_plane
+examples/mask
+
+# generated .plane files
+*.plane
